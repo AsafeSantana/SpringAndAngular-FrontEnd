@@ -1,4 +1,4 @@
-# ApiFront
+# FrontEnd de uma aplicação WEB para cadastro de clientes utilizando o framework ANGULAR. BackEnd  JAVA utilizando SPRINGBOOT.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
 

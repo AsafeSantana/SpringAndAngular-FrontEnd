@@ -1,4 +1,5 @@
-# FrontEnd de uma aplicação WEB para cadastro de clientes utilizando o framework ANGULAR. BackEnd  JAVA utilizando SPRINGBOOT.
+# FrontEnd de uma aplicação WEB para cadastro de clientes utilizando o framework ANGULAR. BackEnd JAVA utilizando SPRINGBOOT.
+BOOTSTRAP para tela de interação.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
 

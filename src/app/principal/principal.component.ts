@@ -42,8 +42,8 @@ export class PrincipalComponent {
     // Limpar  Formulario
     this.cliente = new Cliente();
     //Menssagem
-    alert('Cliente cadastrado com sucesso!');
- }
+    this.SuccessAlert('Cliente cadastrado com sucesso!');
+   }
 
  //Metodo para selecionar um cliente especifico
  selecionarCliente(posicao:number):void{
@@ -80,11 +80,10 @@ export class PrincipalComponent {
     this.tabela =  true;
 
     //Mensagem
-    alert('Cliente alterado com sucesso!');
+    this.WarningAlert('Cliente alterado com sucesso!');
 
     //limpar formulario
     this.cliente = new Cliente();
-
 
   })
  }
@@ -107,7 +106,6 @@ export class PrincipalComponent {
     //remover  cliente no vetor
     this.clientes.splice(posicao, 1);
 
-
     //visibilidade dos botoes
     this.btnCadastro = true;
 
@@ -115,11 +113,58 @@ export class PrincipalComponent {
     this.tabela =  true;
 
     //Mensagem
-    alert('Cliente removido com sucesso!');
+    this.DangerAlert('Cliente removido com sucesso!');
+
 
     //limpar formulário
     this.cliente = new Cliente;
 
   })
  }
+
+ //Cancelar e limpar formulário
+ cancelar():void{
+
+  this.cliente = new Cliente;
+  
+  this.tabela = true;
+ }
+
+ private SuccessAlert(message: string): void {
+  const alertElement = document.createElement('div');
+  alertElement.className = 'alert alert-success mt-3 fixed-top w-100';
+  alertElement.textContent = message;
+
+  document.body.appendChild(alertElement);
+
+  setTimeout(() => {
+    alertElement.remove();
+  }, 3000);
+}
+
+private DangerAlert(message: string): void {
+  const alertElement = document.createElement('div');
+  alertElement.className = 'alert alert-danger mt-3 fixed-top w-100';
+  alertElement.textContent = message;
+
+  document.body.appendChild(alertElement);
+
+  setTimeout(() =>  {
+    alertElement.remove();
+  }, 3000);
+}
+
+private WarningAlert(message: string): void {
+  const alertElement = document.createElement('div');
+  alertElement.className = 'alert alert-warning mt-3 fixed-top w-100';
+  alertElement.textContent = message;
+
+  document.body.appendChild(alertElement);
+
+  setTimeout(() =>  {
+    alertElement.remove();
+  }, 3000);
+}
+
+
 }
